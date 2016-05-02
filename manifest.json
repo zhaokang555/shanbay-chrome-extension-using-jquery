@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "ShanbayChromeExtension",
+  "version": "1.0",
+  "description": "正文过滤, 分页, 翻译选中的单词.",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file:///*/*"
+      ],
+      "js": [
+        "js/contentScript.js"
+      ]
+    }
+  ],
+
+  "permissions": [
+    "https://api.shanbay.com/*",
+    "tabs"
+  ],
+  
+  "web_accessible_resources": [
+    "img/horn24.png"
+  ]
+}
