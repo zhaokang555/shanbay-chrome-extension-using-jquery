@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "ShanbayChromeExtension",
+  "name": "shanbay-chrome-extension-using-jquery",
   "version": "1.0",
   "description": "正文过滤, 分页, 翻译选中的单词.",
 
@@ -8,18 +8,25 @@
     "default_popup": "popup.html"
   },
 
-  "content_scripts": [
-    {
-      "matches": [
-        "http://*/*",
-        "https://*/*",
-        "file:///*/*"
-      ],
-      "js": [
-        "js/contentScript.js"
-      ]
-    }
-  ],
+//  "content_scripts": [
+//    {
+//      "matches": [
+//        "http://*/*",
+//        "https://*/*",
+//        "file:///*/*"
+//      ],
+//
+//      "js": [
+//        "js/contentScript.js"
+//      ]
+//    }
+//  ],
+
+  "background": {
+    "page": [
+      "background.html"
+    ]
+  },
 
   "permissions": [
     "https://api.shanbay.com/*",
