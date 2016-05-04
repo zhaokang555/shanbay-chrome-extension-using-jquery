@@ -8,25 +8,22 @@
     "default_popup": "popup.html"
   },
 
-//  "content_scripts": [
-//    {
-//      "matches": [
-//        "http://*/*",
-//        "https://*/*",
-//        "file:///*/*"
-//      ],
-//
-//      "js": [
-//        "js/contentScript.js"
-//      ]
-//    }
-//  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file:///*/*"
+      ],
 
-  "background": {
-    "page": [
-      "background.html"
-    ]
-  },
+      "css": ["css/popup.css"],
+
+      "js": [
+        "js/jquery-1.7.2/jquery.js",
+        "js/contentScript.js"
+      ]
+    }
+  ],
 
   "permissions": [
     "https://api.shanbay.com/*",

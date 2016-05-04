@@ -1,0 +1,28 @@
+#popup {
+    display: none;
+    position: fixed;
+    box-shadow: 5px 5px 10px #666666;
+    border-radius: 3px;
+    color: white;
+    width: 200px;
+    height: auto;
+    background-color: rgb(32,142,113);
+}
+
+#ukBtn, #usBtn {
+    border: 0;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(32,142,113);
+}
+
+#btnSet {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    background-color: rgb(70,202,165);
+}
+
+#btnSet button {
+    position: relative;
+}
