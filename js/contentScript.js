@@ -171,16 +171,16 @@ function searchHandler(e) {
     // 判断popup是否在边界上
     var popup = document.getElementById('popup');
 
-    if (parseInt(e.clientY) > window.innerHeight - 100) {
-        popup.style.top = (e.clientY - 100) + 'px';
+    if (e.clientY > window.innerHeight - 100) {
+        popup.style.top = (e.pageY - 100) + 'px';
     } else {
-        popup.style.top = e.clientY + 'px';
+        popup.style.top = e.pageY + 'px';
     }
 
-    if (parseInt(e.clientX) > window.innerWidth - 200) {
-        popup.style.left = (e.clientX - 200) + 'px';
+    if (e.clientX > window.innerWidth - 200) {
+        popup.style.left = (e.pageX - 200) + 'px';
     } else {
-        popup.style.left = e.clientX + 'px';
+        popup.style.left = e.pageX + 'px';
     }
 
     searchWord(selectedTxt);
