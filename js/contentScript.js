@@ -132,7 +132,7 @@ function paging(pageContent) {
     for (; y < endPosition; y += pageHeight) {
         pagePositionArr.push(y  - $btnSet.height() - 16);
     }
-    //console.log(pagePositionArr);
+    console.log(pagePositionArr);
 
     var btnOriginLeft = pageContent.leftPosition;
     for (let i in pagePositionArr) {
@@ -146,7 +146,7 @@ function paging(pageContent) {
     }
 
     $('body').append($btnSet);
-    $btnSet.hide().show(1000);
+    $btnSet.hide().show(600);
 
     // 默认滚动到第一页的位置
     $(document).scrollTop(pagePositionArr[0]);
