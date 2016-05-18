@@ -226,9 +226,13 @@ function getContent() {
 
 
 function searchWord(word) {
-    $.get('https://api.shanbay.com/bdc/search/', {word: word}, function (responseObj) {
+    // $.get('https://api.shanbay.com/bdc/search/', {word: word}, function (responseObj) {
+    //     showPopup(responseObj);
+    // }, 'json');
+
+    $.getJSON('https://api.shanbay.com/bdc/search/', {word: word}, function (responseObj) {
         showPopup(responseObj);
-    }, 'json');
+    })
 }
 
 function showPopup(responseObj) {
